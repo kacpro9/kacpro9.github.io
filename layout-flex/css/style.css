@@ -1,18 +1,77 @@
-*{
+* {
     box-sizing: border-box;
 }
-.header{
-background-color: red;
+
+body {
+    margin: 0;
 }
-.asideFirst{
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header,
+.asideFirst,
+.paragraph,
+.asideSecond,
+.footer {
+    text-align: center;
+}
+
+.header {
+    background-color: red;
+    height: 50px;
+}
+
+.asideFirst {
     background-color: green;
+    width: 20%;
+    height: 150px;
 }
-.paragraph{
+
+.paragraph {
     background-color: lightblue;
+    margin: 0;
+    width: 60%;
+    height: 150px;
 }
-.asideSecond{
+
+.asideSecond {
     background-color: pink;
+    width: 20%;
+    height: 150px;
 }
-.footer{
+
+.footer {
     background-color: purple;
+    height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+
+    .asideFirst {
+        width: 100%;
+        order: 1;
+    }
+
+    .paragraph {
+        width: 70%;
+    }
+
+    .asideSecond {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .paragraph {
+        width: 100%;
+    }
+
+    .asideSecond {
+        width: 100%;
+        order: 2;
+    }
 }
