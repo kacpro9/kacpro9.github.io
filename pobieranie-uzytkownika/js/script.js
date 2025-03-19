@@ -10,14 +10,12 @@ const getUser = () => {
     fetch(`https://akademia108.pl/kurs-front-end/ajax/1-pobierz-dane-programisty.php`, {
         mode: 'cors',
         method: 'GET',
-    })
-        .then(res => res.json())
-        .then(resJSON => {
+    }).then(res => res.json()).then(resJSON => {
             console.log(resJSON);
 
-            divDp.innerText = resJSON;
-        })
-        .catch((error) => {
+            divDp.innerText = resJSON.imie;
+           
+    }).catch((error) => {
             console.error('Error', error);
         });
 
