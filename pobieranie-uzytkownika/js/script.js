@@ -13,7 +13,8 @@ const getUser = () => {
     }).then(res => res.json()).then(resJSON => {
             console.log(resJSON);
 
-            divDp.innerText = resJSON.imie;
+            divDp.innerText = `${resJSON.imie}, ${resJSON.nazwisko}, ${resJSON.zawod}, ${resJSON.firma}`;
+            
            
     }).catch((error) => {
             console.error('Error', error);
